@@ -58,17 +58,17 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Qun Li</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Qun Li</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Lu Huang</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Lu Huang</a><sup>1</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a><sup>1</sup>,
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block"><sup>1</sup>Nanjing University of Posts and Telecommunications<br><!-- Conferance name and year --></span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
                   <div class="column has-text-centered">
@@ -88,7 +88,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/totoropink/iFSS-Diff" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -116,18 +116,20 @@
 </section>
 
 
-<!-- Teaser video-->
+<!-- Teaser image-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+    <!-- 修改1：为父容器添加Flex布局，实现图片和标题的垂直居中 -->
+    <div class="hero-body" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 300px;">
+      <!-- 修改2：限制图片宽度并确保居中 -->
+      <img src="static/images/1.SVG" alt="MY ALT TEXT" style="max-width: 90%; height: auto; margin: 0 auto;" />
+      <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem;">
+        We propose iFSS-Diff, the first framework to introduce diffusion models into incremental few-shot semantic segmentation. 
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End teaser image -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -137,7 +139,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Incremental Few-shot Semantic Segmentation (iFSS) aims to learn novel classes with limited samples while preserving segmentation capability for base classes, addressing catastrophic forgetting. Existing methods, relying on knowledge distillation and background learning, still suffer from feature drift and poor generalization. To overcome these challenges, we propose a novel diffusion-based generative framework for iFSS. By mapping binary masks to three-channel representations and optimizing class-specific semantic embeddings, our method enhances foreground-background distinction and prevents feature interference. A lightweight post-processing module refines segmentation by converting generated images into binary masks. Leveraging the prior knowledge of diffusion models, we unify the learning of base and novel classes, eliminating complex training strategies and improving adaptability. Experiments on PASCAL-5i and COCO-20i datasets show our framework achieves state-of-the-art performance with minimal data. Additionally, our framework exhibits strong generalization in cross-domain few-shot segmentation (CD-FSS) benchmarks.
           </p>
         </div>
       </div>
@@ -147,120 +149,101 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
+<section class="hero is-small" style="margin-top: 2rem;">
   <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
+    <div class="container has-text-centered">  <!-- 新增居中容器 -->
+      
+      <!-- 单一项容器 -->
+      <div class="single-image-container">  <!-- 新增自定义容器 -->
+        <!-- 标题 -->
+        <h2 class="title is-3 mb-5">iFSS-Diff framework</h2> <!-- 移除了内联样式 -->
         
+        <!-- 图片容器 -->
+        <div class="image-wrapper">  <!-- 新增图片包裹层 -->
+          <img 
+            src="static/images/2.svg" 
+            alt="Framework illustration"
+            class="centered-image"
+          >
+        </div>
+        
+        <!-- 描述 -->
+        <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem; font-size: 0.9rem;" >
+          iFSS-Diff converts binary masks into three-channel RGB masks to align with the input paradigm of latent diffusion models, using them as supervision signals to obtain optimized class-specific semantic embeddings. This approach intrinsically decouples the embeddings of base and novel classes, effectively preventing catastrophic forgetting while enhancing the model's generalization capability. 
+        </h2>
       </div>
+
     </div>
-  </section>
-<!--End paper poster -->
+  </div>
+</section>
+
+
+
+<style>
+  .single-image-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .single-image-container1 {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-wrapper1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .centered-image {
+    width: 80%;
+    height: auto;
+    display: block;  
+    margin: 0 auto;  
+  }
+
+  .centered-image1 {
+    width: 80%;
+    height: auto;
+    display: block;  
+    margin: 0 auto;  
+  }
+</style>
+
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">  <!-- 新增居中容器 -->
+      
+      <!-- 单一项容器 -->
+      <div class="single-image-container1">  <!-- 新增自定义容器 -->
+        <h2 class="title is-3 mb-5">Visual Results</h2> <!-- 移除了内联样式 -->
+        
+        <!-- 图片容器 -->
+        <div class="image-wrapper1">  <!-- 新增图片包裹层 -->
+          <img 
+            src="static/images/3.svg" 
+            alt="Framework illustration"
+            class="centered-image1"
+          >
+        </div>
+        
+        <!-- 描述 -->
+        <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem; font-size: 0.9rem;" >
+          Qualitative results of incremental few-shot semantic segmentation on PASCAL-5i dataset (1-shot), where the baseline represents the results without color and optimized background embeddings. For the first image, ”person” is the base class and ”bus” is the novel class.
+        </h2>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <!--BibTex citation -->
@@ -280,9 +263,8 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. <br> This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. Thanks for their excellent work.
           </p>
 
         </div>
